@@ -1,0 +1,16 @@
+.navbarBox {
+    padding: 1rem;
+    border-bottom: 1px solid #bdb5b5;
+    padding-bottom: 10px;
+}
+.navbarBox a {
+    border-radius: 40px;
+}
+
+.navbarBox .homeTitle {
+    font-size: 28px;
+}
+.navbarBox .homeTitle:hover {
+    background-color: transparent;
+    
+}

@@ -1,0 +1,17 @@
+.introductionWrapper {
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+    padding: 100px;
+    background: #f1f3f5;
+}
+
+.container .title {
+    font-size: 48px;
+}
+
+.container .subTitle {
+    font-size: 32px;
+}
