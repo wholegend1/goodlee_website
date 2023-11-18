@@ -1,5 +1,5 @@
 
-import CardLister from "@/components/Card/CardLister";
+import CardLister from "@/components/CardList/CardLister";
 import HomeIntroduction from "../components/Home/HomeIntroduction";
 import data from "./data";
 import FilterList from "@/components/Filter/FilterList";

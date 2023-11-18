@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/joy/Box";
-import styles from "../../styles/homeExplain.module.css";
+import styles from "./homeExplain.module.css";
 import { Button, Input } from "@mui/joy";
 import MailIcon from "@mui/icons-material/Mail";
 export default function HomeExplain() {

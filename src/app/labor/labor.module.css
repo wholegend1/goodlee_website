@@ -1,0 +1,72 @@
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    max-width: 1920px;
+    padding: 50px;
+    background: lightgray;
+    gap: 30px
+}
+
+.container .imageView {
+    position: relative;
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid darkgray;
+}
+
+.container .imageView .brand {
+    top: 15px;
+    left: 10px;
+    background: #b570e1;
+    color: #FFF;
+    z-index: 99;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 3px 10px 3px 5px;
+    text-align: center;
+    width: 100px;
+    letter-spacing: 1.2px;
+    box-shadow: 0px 2px 1px #6e597a;
+    position: absolute;
+    z-index: 2;
+    padding: 5px;
+}
+
+.container .laborBox {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+}
+
+.container .laborBox h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #b570e1;
+}
+
+.container .laborBox .info {
+    display: flex;
+    justify-content: space-between;
+    /* 將兩個列均勻分佈 */
+}
+
+.infoColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+
+}
+
+.container .laborInformation {
+    flex: 1;
+    background: white;
+
+}
