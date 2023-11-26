@@ -3,7 +3,6 @@ import Image from "next/image";
 import data from "@/app/data";
 export default function Page({ params }: { params: { id: number } }) {
   const laborData = data.find((labor) => {
-
     return labor.id == params.id;
   });
   return (
@@ -39,12 +38,70 @@ export default function Page({ params }: { params: { id: number } }) {
             </div>
           </div>
           <div className={styles.buttonBox}>
-            
+            <div>
+              <Image
+                src="/playlist_add_black_24dp.svg"
+                alt="icon"
+                width={24}
+                height={24}
+              />
+            </div>
+            <button className={styles.button}>發出雇傭申請</button>
           </div>
         </div>
       </div>
-      <div>{JSON.stringify(laborData)}</div>
-      My Post: {params.id}
+      <div className={styles.extra}>
+        <div className={styles.extraInfo}>
+          <div className={styles.image}>
+            <Image
+              src="/family_restroom_black_48dp.svg"
+              alt="family"
+              width={48}
+              height={48}
+            />
+          </div>
+          <div className={styles.title}>家庭狀況</div>
+          <ul>
+            <li>配偶姓名: {laborData?.familyStatus?.nameOfSpouse || "無"}</li>
+            <li>子女数量: {laborData?.familyStatus?.childrenNo || "無"}</li>
+            <li>子女年龄: {laborData?.familyStatus?.childrenAge || "無"}</li>
+            <li>父亲姓名: {laborData?.familyStatus?.nameOfFather || "無"}</li>
+            <li>母亲姓名: {laborData?.familyStatus?.nameOfMother || "無"}</li>
+            <li>父亲年龄: {laborData?.familyStatus?.ageOfFather || "無"}</li>
+            <li>母亲年龄: {laborData?.familyStatus?.ageOfMother || "無"}</li>
+          </ul>
+        </div>
+        <div className={styles.extraInfo}>
+          <div className={styles.image}>
+            <Image
+              src="/directions_run_black_48dp.svg"
+              alt="directions"
+              width={48}
+              height={48}
+            />
+          </div>
+          <div className={styles.title}>工作經歷</div>
+          <div>{laborData?.experience}</div>
+        </div>
+
+        <div className={styles.extraInfo}>
+          <div className={styles.image}>
+            <Image
+              src="/description_black_48dp.svg"
+              alt="description"
+              width={48}
+              height={48}
+            />
+          </div>
+
+          <div className={styles.title}>工作技能</div>
+          <div className={styles.skills}>
+            <div>菜色：{laborData?.cooking || "無"}</div>
+            <div>特別技能：{laborData?.specialSkill || "無"}</div>
+            <div>照顧小孩：{laborData?.babyCareSkill || "無"}</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

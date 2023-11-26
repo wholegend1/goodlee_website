@@ -13,28 +13,30 @@ export default function SubFooter() {
     e.preventDefault();
     if (
       form.current &&
-      process.env.YOUR_SERVICE_ID &&
-      process.env.YOUR_TEMPLATE_ID &&
-      process.env.YOUR_PUBLIC_KEY
+      process.env.NEXT_PUBLIC_YOUR_SERVICE_ID &&
+      process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID &&
+      process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
     ) {
       emailjs
         .sendForm(
-          process.env.YOUR_SERVICE_ID,
-          process.env.YOUR_TEMPLATE_ID,
+          process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
+          process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
           form.current,
-          process.env.YOUR_PUBLIC_KEY
+          process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
         )
         .then(
           (result) => {
+            alert("郵件已成功發送！");
+            if (form.current) form.current.reset();
             console.log(result.text);
           },
           (error) => {
-            alert(`Error: ${error.text}`); // 弹出错误消息
+            alert("郵件發送失敗！請稍後重試。");
             console.log(error.text);
           }
         );
     } else {
-      alert("Error: Environment variables not found"); // 可能的环境变量错误
+      alert("發生未知的錯誤");
     }
   };
 
