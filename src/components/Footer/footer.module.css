@@ -1,0 +1,49 @@
+.colum {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.colum h2 {
+    font-size: 28px;
+}
+
+.colum .info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.colum .info .image {
+    position: relative;
+    min-width: 100px;
+    min-height: 100px;
+    background-size: contain;
+}
+
+.colum .info .contact {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.colum .qa {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.colum .emailBox {
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+}
+.colum .emailBox .submitButton{
+background: #b570e1;
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 10px;
+}
