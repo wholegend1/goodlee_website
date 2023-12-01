@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/joy/Box";
-import styles from "../../styles/homeIntroduction.module.css";
+import styles from "./homeIntroduction.module.css";
 
 interface IntroductionType {
   title: string;

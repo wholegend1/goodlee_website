@@ -4,7 +4,7 @@ import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
 import ListItemButton from "@mui/joy/ListItemButton";
 import Person from "@mui/icons-material/Person";
-import styles from "../../styles/navbar.module.css";
+import styles from "./navbar.module.css";
 import Link from "next/link";
 
 export default function Navbar() {

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../../styles/cardLister.module.css"
-import Card from "./Card";
+import styles from "./cardLister.module.css"
+import Card from "../Card/Card";
 
 type CardListerProps = {
   data: any[];

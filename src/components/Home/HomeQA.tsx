@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/joy/Box";
-import styles from "../../styles/homeQA.module.css";
-import Image from "next/image";
+import styles from "./homeQA.module.css";
 
 export default function HomeQA() {
   return (

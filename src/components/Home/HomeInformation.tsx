@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/joy/Box";
-import styles from "../../styles/homeInformation.module.css";
+import styles from "./homeInformation.module.css";
 import Image from "next/image";
 
 export default function HomeInformation() {
