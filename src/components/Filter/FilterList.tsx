@@ -8,7 +8,6 @@ import SearchBox from "./SearchBox";
 export default function FilterList() {
   return (
     <Box className={styles.filterWrapper}>
-      <div className={styles.title}>篩選清單</div>
       <div className={styles.filterBox}>
         <Selection />
         <Slider />
