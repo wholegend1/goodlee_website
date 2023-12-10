@@ -14,7 +14,7 @@ export default function Home() {
         title={"找到您最適合的"}
         subTitle={"雇主與仲介公司最好的溝通橋樑"}
       />
-      <div className="px-3 py-20 pt-0 sm:px-4 md:px-5 lg:px-6 xl:px-7 2xl:px-8 flex gap-[50px] flex-col">
+      <div className="px-3 py-20 pt-2 sm:px-4 md:px-5 lg:px-6 xl:px-7 2xl:px-8 flex gap-[50px] flex-col">
         <FilterList />
         <CardLister data={data} />
       </div>
