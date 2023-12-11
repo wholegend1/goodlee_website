@@ -56,7 +56,7 @@ export default function OverflowCard({ data }: CardType) {
         <CardContent>
           <Typography level="title-md" className="flex justify-between">
             {data.name}
-            <div
+            <span
               onClick={toggleCollection}
               className="button z-10 hover:bg-gray-300 cursor-pointer "
             >
@@ -65,7 +65,7 @@ export default function OverflowCard({ data }: CardType) {
               ) : (
                 <PlaylistAddTwoToneIcon />
               )}
-            </div>
+            </span>
           </Typography>
         </CardContent>
         <CardOverflow variant="soft" sx={{ bgcolor: "background.level1" }}>

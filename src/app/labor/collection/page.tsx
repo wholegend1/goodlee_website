@@ -18,10 +18,11 @@ export default function Collection() {
         </div>
       ) : (
         <div className="collection-box min-h-screen px-3 py-20 pt-0 sm:px-4 md:px-5 lg:px-6 xl:px-7 2xl:px-8 flex gap-[50px] flex-col">
-          <h1 className="text-2xl font-normal flex px-6">
-            您目前收藏了{selectedItems.length}名移工
-          </h1>
-          <CardLister data={selectedItems}></CardLister>
+          <h1 className="text-2xl font-normal flex px-6"></h1>
+          <CardLister
+            title={`您目前收藏了${selectedItems.length}名移工`}
+            data={selectedItems}
+          ></CardLister>
         </div>
       )}
     </div>
