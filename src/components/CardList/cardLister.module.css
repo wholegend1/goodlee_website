@@ -34,6 +34,6 @@
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: flex-start;
     width: calc(25% - 2rem);
+
 }

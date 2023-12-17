@@ -11,18 +11,18 @@ export default function SubFooter() {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (
+    const isValidForm =
       form.current &&
       process.env.NEXT_PUBLIC_YOUR_SERVICE_ID &&
       process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID &&
-      process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
-    ) {
+      process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY;
+    if (isValidForm) {
       emailjs
         .sendForm(
-          process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
-          process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
-          form.current,
-          process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY
+          process.env.NEXT_PUBLIC_YOUR_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID!,
+          form.current!,
+          process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY!
         )
         .then(
           (result) => {

@@ -4,24 +4,19 @@ import Option from "@mui/joy/Option";
 import IconButton from "@mui/joy/IconButton";
 import CloseRounded from "@mui/icons-material/CloseRounded";
 import { Box } from "@mui/joy";
-import data from "../../app/data"; // 將您的數據文件引入這裡
+import { useFilterContext } from "@/providers/FilterContextProvider";
 
-interface DataItem {
-  id: number;
-  avatar: string;
-  name: string;
-  age: number;
-  country: string;
-  education: string;
+interface SelectionProps {
+  handleSelectChange: (newValue: string | null) => void;
 }
-
-const Selection: React.FC = () => {
+const Selection = ({ handleSelectChange }: SelectionProps) => {
   const [value, setValue] = React.useState<string | null>(null);
   const action: SelectStaticProps["action"] = React.useRef(null);
-  const countries: string[] = Array.from(
-    new Set(data.map((item: DataItem) => item.country))
-  ); // 從數據中提取獨特的國家
-
+  const { countries } = useFilterContext();
+  const handleChange = (event: any, newValue: string | null) => {
+    setValue(newValue);
+    handleSelectChange(newValue);
+  };
   return (
     <Box>
       <div>國家</div>
@@ -29,7 +24,7 @@ const Selection: React.FC = () => {
         action={action}
         value={value}
         placeholder="選擇國家..."
-        onChange={(e, newValue) => setValue(newValue)}
+        onChange={(e, newValue) => handleChange(e, newValue)}
         {...(value && {
           endDecorator: (
             <IconButton
@@ -39,8 +34,8 @@ const Selection: React.FC = () => {
               onMouseDown={(event) => {
                 event.stopPropagation();
               }}
-              onClick={() => {
-                setValue(null);
+              onClick={(e) => {
+                handleChange(e, null);
                 action.current?.focusVisible();
               }}
             >
