@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./cardLister.module.css"
 import Card from "../Card/Card";
+import { Person } from "@/types";
 
 type CardListerProps = {
-  data: any[];
+  data: Person[];
   title?: string;
 };
 

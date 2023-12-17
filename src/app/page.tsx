@@ -8,17 +8,17 @@ import HomeQA from "@/components/Home/HomeQA";
 import HomeExplain from "@/components/Home/HomeExplain";
 import { useState } from "react";
 import { applyFilters } from "@/utils/filterUtils";
-import { Person } from "@/types";
+import { FilterType, Person } from "@/types";
 
 export default function Home() {
   const [dataState, setDataState] = useState<Person[]>(data); //之後要改swr
-  const [selectedFilters, setSelectedFilters] = useState<any>({
+  const [selectedFilters, setSelectedFilters] = useState<FilterType>({
     selectFilter: null,
-    sliderValue: [,],
+    sliderValue: [],
     searchValue: "",
   });
-  const applyFiltersAndUpdate = (filters: any) => {
-    setSelectedFilters((prevFilters: any) => ({
+  const applyFiltersAndUpdate = (filters: FilterType) => {
+    setSelectedFilters((prevFilters: FilterType) => ({
       ...prevFilters,
       ...filters,
     }));

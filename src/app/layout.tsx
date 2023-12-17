@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from "../components/Navbar/Navbar";
 import Footer from '@/components/Footer/Footer';
+import { FilterContextProvider } from '@/providers/FilterContextProvider';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <div className='pt-[80px]'>{children}</div>
+        <FilterContextProvider>
+          <div className="pt-[80px]">{children}</div>
+        </FilterContextProvider>
         <footer>
           <Footer />
         </footer>
