@@ -61,3 +61,9 @@ export type Person = {
   babyCareSkill: string;
   experience: string;
 };
+
+export type FilterType = {
+  selectFilter: string | null;
+  sliderValue: number[];
+  searchValue: string;
+};
